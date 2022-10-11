@@ -1,0 +1,10 @@
+module Git
+  module Pr
+    module Release
+      module Roadrunner
+        VERSION: String
+        # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+      end
+    end
+  end
+end
