@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "git-pr-release-roadrunner"
-  spec.version       = '2.2.0'
+  spec.version       = '0.0.1'
   spec.authors       = ["trashypete"]
   spec.email         = ["n/a"]
   spec.summary       = 'Creates a release pull request'
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files`.split($/)
   spec.bindir        = "exe"
-  spec.executables   = "git-pr-release-roadrunner"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
